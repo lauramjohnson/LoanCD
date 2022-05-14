@@ -8,21 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		FD219AAE2830196400BDD973 /* LoanCDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AAD2830196400BDD973 /* LoanCDApp.swift */; };
-		FD219AB02830196400BDD973 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AAF2830196400BDD973 /* ContentView.swift */; };
+		FD219AB02830196400BDD973 /* LoansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AAF2830196400BDD973 /* LoansView.swift */; };
 		FD219AB22830196500BDD973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD219AB12830196500BDD973 /* Assets.xcassets */; };
 		FD219AB52830196500BDD973 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD219AB42830196500BDD973 /* Preview Assets.xcassets */; };
 		FD219AB72830196500BDD973 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AB62830196500BDD973 /* Persistence.swift */; };
 		FD219ABA2830196500BDD973 /* LoanCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD219AB82830196500BDD973 /* LoanCD.xcdatamodeld */; };
+		FD219AC128305C2A00BDD973 /* LoanListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AC028305C2A00BDD973 /* LoanListItemView.swift */; };
+		FD219AC328305EC600BDD973 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AC228305EC600BDD973 /* Date+Ext.swift */; };
+		FD219AC528305FFF00BDD973 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AC428305FFF00BDD973 /* Double+Ext.swift */; };
+		FD219AC9283062FE00BDD973 /* AddLoanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AC8283062FE00BDD973 /* AddLoanView.swift */; };
+		FD219ACB2830665000BDD973 /* AddLoanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219ACA2830665000BDD973 /* AddLoanViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD219AAA2830196400BDD973 /* LoanCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoanCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD219AAD2830196400BDD973 /* LoanCDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanCDApp.swift; sourceTree = "<group>"; };
-		FD219AAF2830196400BDD973 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FD219AAF2830196400BDD973 /* LoansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansView.swift; sourceTree = "<group>"; };
 		FD219AB12830196500BDD973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD219AB42830196500BDD973 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FD219AB62830196500BDD973 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		FD219AB92830196500BDD973 /* LoanCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoanCD.xcdatamodel; sourceTree = "<group>"; };
+		FD219AC028305C2A00BDD973 /* LoanListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanListItemView.swift; sourceTree = "<group>"; };
+		FD219AC228305EC600BDD973 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		FD219AC428305FFF00BDD973 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
+		FD219AC8283062FE00BDD973 /* AddLoanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanView.swift; sourceTree = "<group>"; };
+		FD219ACA2830665000BDD973 /* AddLoanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +66,12 @@
 			isa = PBXGroup;
 			children = (
 				FD219AAD2830196400BDD973 /* LoanCDApp.swift */,
-				FD219AAF2830196400BDD973 /* ContentView.swift */,
-				FD219AB12830196500BDD973 /* Assets.xcassets */,
+				FD219AC62830629800BDD973 /* Views */,
+				FD219ACC283072CA00BDD973 /* View Models */,
+				FD219AC7283062AE00BDD973 /* Extensions */,
 				FD219AB62830196500BDD973 /* Persistence.swift */,
 				FD219AB82830196500BDD973 /* LoanCD.xcdatamodeld */,
+				FD219AB12830196500BDD973 /* Assets.xcassets */,
 				FD219AB32830196500BDD973 /* Preview Content */,
 			);
 			path = LoanCD;
@@ -71,6 +83,33 @@
 				FD219AB42830196500BDD973 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FD219AC62830629800BDD973 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD219AAF2830196400BDD973 /* LoansView.swift */,
+				FD219AC028305C2A00BDD973 /* LoanListItemView.swift */,
+				FD219AC8283062FE00BDD973 /* AddLoanView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FD219AC7283062AE00BDD973 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FD219AC228305EC600BDD973 /* Date+Ext.swift */,
+				FD219AC428305FFF00BDD973 /* Double+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FD219ACC283072CA00BDD973 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				FD219ACA2830665000BDD973 /* AddLoanViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +183,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD219ABA2830196500BDD973 /* LoanCD.xcdatamodeld in Sources */,
+				FD219AC328305EC600BDD973 /* Date+Ext.swift in Sources */,
+				FD219AC9283062FE00BDD973 /* AddLoanView.swift in Sources */,
 				FD219AB72830196500BDD973 /* Persistence.swift in Sources */,
-				FD219AB02830196400BDD973 /* ContentView.swift in Sources */,
+				FD219AB02830196400BDD973 /* LoansView.swift in Sources */,
+				FD219ACB2830665000BDD973 /* AddLoanViewModel.swift in Sources */,
+				FD219AC528305FFF00BDD973 /* Double+Ext.swift in Sources */,
+				FD219AC128305C2A00BDD973 /* LoanListItemView.swift in Sources */,
 				FD219AAE2830196400BDD973 /* LoanCDApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +247,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -257,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -281,8 +325,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,8 +354,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
