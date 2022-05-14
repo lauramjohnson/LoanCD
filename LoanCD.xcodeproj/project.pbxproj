@@ -18,6 +18,8 @@
 		FD219AC528305FFF00BDD973 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AC428305FFF00BDD973 /* Double+Ext.swift */; };
 		FD219AC9283062FE00BDD973 /* AddLoanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AC8283062FE00BDD973 /* AddLoanView.swift */; };
 		FD219ACB2830665000BDD973 /* AddLoanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219ACA2830665000BDD973 /* AddLoanViewModel.swift */; };
+		FD219AD0283076BC00BDD973 /* PaymentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219ACF283076BC00BDD973 /* PaymentsView.swift */; };
+		FD219AD3283076F800BDD973 /* PaymentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AD2283076F800BDD973 /* PaymentsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		FD219AC428305FFF00BDD973 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 		FD219AC8283062FE00BDD973 /* AddLoanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanView.swift; sourceTree = "<group>"; };
 		FD219ACA2830665000BDD973 /* AddLoanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanViewModel.swift; sourceTree = "<group>"; };
+		FD219ACF283076BC00BDD973 /* PaymentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsView.swift; sourceTree = "<group>"; };
+		FD219AD2283076F800BDD973 /* PaymentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				FD219AAD2830196400BDD973 /* LoanCDApp.swift */,
+				FD219ACE2830769200BDD973 /* LoansView */,
+				FD219ACD2830767000BDD973 /* AddLoanView */,
+				FD219AD1283076C200BDD973 /* PaymentsView */,
 				FD219AC62830629800BDD973 /* Views */,
-				FD219ACC283072CA00BDD973 /* View Models */,
 				FD219AC7283062AE00BDD973 /* Extensions */,
 				FD219AB62830196500BDD973 /* Persistence.swift */,
 				FD219AB82830196500BDD973 /* LoanCD.xcdatamodeld */,
@@ -88,9 +94,7 @@
 		FD219AC62830629800BDD973 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FD219AAF2830196400BDD973 /* LoansView.swift */,
 				FD219AC028305C2A00BDD973 /* LoanListItemView.swift */,
-				FD219AC8283062FE00BDD973 /* AddLoanView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,12 +108,30 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		FD219ACC283072CA00BDD973 /* View Models */ = {
+		FD219ACD2830767000BDD973 /* AddLoanView */ = {
 			isa = PBXGroup;
 			children = (
+				FD219AC8283062FE00BDD973 /* AddLoanView.swift */,
 				FD219ACA2830665000BDD973 /* AddLoanViewModel.swift */,
 			);
-			path = "View Models";
+			path = AddLoanView;
+			sourceTree = "<group>";
+		};
+		FD219ACE2830769200BDD973 /* LoansView */ = {
+			isa = PBXGroup;
+			children = (
+				FD219AAF2830196400BDD973 /* LoansView.swift */,
+			);
+			path = LoansView;
+			sourceTree = "<group>";
+		};
+		FD219AD1283076C200BDD973 /* PaymentsView */ = {
+			isa = PBXGroup;
+			children = (
+				FD219ACF283076BC00BDD973 /* PaymentsView.swift */,
+				FD219AD2283076F800BDD973 /* PaymentsViewModel.swift */,
+			);
+			path = PaymentsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +206,7 @@
 			files = (
 				FD219ABA2830196500BDD973 /* LoanCD.xcdatamodeld in Sources */,
 				FD219AC328305EC600BDD973 /* Date+Ext.swift in Sources */,
+				FD219AD3283076F800BDD973 /* PaymentsViewModel.swift in Sources */,
 				FD219AC9283062FE00BDD973 /* AddLoanView.swift in Sources */,
 				FD219AB72830196500BDD973 /* Persistence.swift in Sources */,
 				FD219AB02830196400BDD973 /* LoansView.swift in Sources */,
@@ -191,6 +214,7 @@
 				FD219AC528305FFF00BDD973 /* Double+Ext.swift in Sources */,
 				FD219AC128305C2A00BDD973 /* LoanListItemView.swift in Sources */,
 				FD219AAE2830196400BDD973 /* LoanCDApp.swift in Sources */,
+				FD219AD0283076BC00BDD973 /* PaymentsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
