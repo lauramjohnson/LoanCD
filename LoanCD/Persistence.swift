@@ -17,7 +17,7 @@ struct PersistenceController {
     }
 
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "LoanCD")
+        container = NSPersistentCloudKitContainer(name: "LJLoanCD")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
@@ -26,7 +26,9 @@ struct PersistenceController {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+        
         container.viewContext.automaticallyMergesChangesFromParent = true
+        viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
     }
     
     func save() {
@@ -34,6 +36,18 @@ struct PersistenceController {
             try viewContext.save()
         } catch {
             print("error saving to core date", error.localizedDescription)
+        }
+    }
+    
+    func fetchPayments(for loanId: String) -> [Payment] {
+        let request: NSFetchRequest<Payment> = Payment.fetchRequest()
+        request.predicate = NSPredicate(format: "loanId == %@", loanId)
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \Payment.date, ascending: true)]
+        
+        do {
+            return try viewContext.fetch(request)
+        } catch {
+            return []
         }
     }
 }

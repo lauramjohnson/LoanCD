@@ -22,7 +22,9 @@ struct LoansView: View {
         NavigationView {
             List {
                 ForEach(loans) { loan in
+                    NavigationLink(destination: PaymentsView(viewModel: PaymentsViewModel(loan: loan))) {
                     LoanListItemView(name: loan.name ?? "Unknown", amount: loan.totalAmount, date: loan.dueDate ?? Date())
+                    }
                 }
                 .onDelete(perform: deleteItems)
             }

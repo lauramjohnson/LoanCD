@@ -20,6 +20,11 @@
 		FD219ACB2830665000BDD973 /* AddLoanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219ACA2830665000BDD973 /* AddLoanViewModel.swift */; };
 		FD219AD0283076BC00BDD973 /* PaymentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219ACF283076BC00BDD973 /* PaymentsView.swift */; };
 		FD219AD3283076F800BDD973 /* PaymentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AD2283076F800BDD973 /* PaymentsViewModel.swift */; };
+		FD219AD528314F5700BDD973 /* AddPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AD428314F5700BDD973 /* AddPaymentView.swift */; };
+		FD219AD728314F7E00BDD973 /* AddPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AD628314F7E00BDD973 /* AddPaymentViewModel.swift */; };
+		FD219ADA28315C0800BDD973 /* PaymentListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219AD928315C0800BDD973 /* PaymentListItemView.swift */; };
+		FD219ADC28316E9200BDD973 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD219ADB28316E9200BDD973 /* ProgressBarView.swift */; };
+		FD219AE02831799F00BDD973 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD219ADF2831799F00BDD973 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,13 @@
 		FD219ACA2830665000BDD973 /* AddLoanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanViewModel.swift; sourceTree = "<group>"; };
 		FD219ACF283076BC00BDD973 /* PaymentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsView.swift; sourceTree = "<group>"; };
 		FD219AD2283076F800BDD973 /* PaymentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewModel.swift; sourceTree = "<group>"; };
+		FD219AD428314F5700BDD973 /* AddPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentView.swift; sourceTree = "<group>"; };
+		FD219AD628314F7E00BDD973 /* AddPaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentViewModel.swift; sourceTree = "<group>"; };
+		FD219AD928315C0800BDD973 /* PaymentListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListItemView.swift; sourceTree = "<group>"; };
+		FD219ADB28316E9200BDD973 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		FD219ADD2831799000BDD973 /* LoanCD.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoanCD.entitlements; sourceTree = "<group>"; };
+		FD219ADF2831799F00BDD973 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		FD219AE1283179F600BDD973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD219AE02831799F00BDD973 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +68,7 @@
 			children = (
 				FD219AAC2830196400BDD973 /* LoanCD */,
 				FD219AAB2830196400BDD973 /* Products */,
+				FD219ADE2831799F00BDD973 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,10 +83,13 @@
 		FD219AAC2830196400BDD973 /* LoanCD */ = {
 			isa = PBXGroup;
 			children = (
+				FD219AE1283179F600BDD973 /* Info.plist */,
+				FD219ADD2831799000BDD973 /* LoanCD.entitlements */,
 				FD219AAD2830196400BDD973 /* LoanCDApp.swift */,
 				FD219ACE2830769200BDD973 /* LoansView */,
 				FD219ACD2830767000BDD973 /* AddLoanView */,
 				FD219AD1283076C200BDD973 /* PaymentsView */,
+				FD219AD828314F8600BDD973 /* AddPaymentView */,
 				FD219AC62830629800BDD973 /* Views */,
 				FD219AC7283062AE00BDD973 /* Extensions */,
 				FD219AB62830196500BDD973 /* Persistence.swift */,
@@ -95,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				FD219AC028305C2A00BDD973 /* LoanListItemView.swift */,
+				FD219AD928315C0800BDD973 /* PaymentListItemView.swift */,
+				FD219ADB28316E9200BDD973 /* ProgressBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +151,23 @@
 				FD219AD2283076F800BDD973 /* PaymentsViewModel.swift */,
 			);
 			path = PaymentsView;
+			sourceTree = "<group>";
+		};
+		FD219AD828314F8600BDD973 /* AddPaymentView */ = {
+			isa = PBXGroup;
+			children = (
+				FD219AD428314F5700BDD973 /* AddPaymentView.swift */,
+				FD219AD628314F7E00BDD973 /* AddPaymentViewModel.swift */,
+			);
+			path = AddPaymentView;
+			sourceTree = "<group>";
+		};
+		FD219ADE2831799F00BDD973 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD219ADF2831799F00BDD973 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,15 +241,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD219ABA2830196500BDD973 /* LoanCD.xcdatamodeld in Sources */,
+				FD219AD728314F7E00BDD973 /* AddPaymentViewModel.swift in Sources */,
 				FD219AC328305EC600BDD973 /* Date+Ext.swift in Sources */,
 				FD219AD3283076F800BDD973 /* PaymentsViewModel.swift in Sources */,
 				FD219AC9283062FE00BDD973 /* AddLoanView.swift in Sources */,
 				FD219AB72830196500BDD973 /* Persistence.swift in Sources */,
+				FD219AD528314F5700BDD973 /* AddPaymentView.swift in Sources */,
 				FD219AB02830196400BDD973 /* LoansView.swift in Sources */,
 				FD219ACB2830665000BDD973 /* AddLoanViewModel.swift in Sources */,
 				FD219AC528305FFF00BDD973 /* Double+Ext.swift in Sources */,
+				FD219ADA28315C0800BDD973 /* PaymentListItemView.swift in Sources */,
 				FD219AC128305C2A00BDD973 /* LoanListItemView.swift in Sources */,
 				FD219AAE2830196400BDD973 /* LoanCDApp.swift in Sources */,
+				FD219ADC28316E9200BDD973 /* ProgressBarView.swift in Sources */,
 				FD219AD0283076BC00BDD973 /* PaymentsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,12 +380,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LoanCD/LoanCD.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LoanCD/Preview Content\"";
 				DEVELOPMENT_TEAM = 4KD65TKKK8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoanCD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -369,12 +411,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LoanCD/LoanCD.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LoanCD/Preview Content\"";
 				DEVELOPMENT_TEAM = 4KD65TKKK8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoanCD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
